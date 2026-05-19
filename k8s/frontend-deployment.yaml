@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-frontend
+  namespace: heinens
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-frontend
+  template:
+    metadata:
+      labels:
+        app: inventory-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: heinens-frontend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80

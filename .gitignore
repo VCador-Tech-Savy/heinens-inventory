@@ -1,0 +1,13 @@
+# .NET
+backend/bin/
+backend/obj/
+backend/inventory.db
+backend/*.db
+
+# React
+frontend/node_modules/
+frontend/build/
+
+# General
+.DS_Store
+*.user
